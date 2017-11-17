@@ -4,6 +4,7 @@ namespace CreditWithdrawalsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use CreditWithdrawalsBundle\Entity\PaymentRequests;
 
 class DefaultController extends Controller
 {
@@ -12,6 +13,8 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('CreditWithdrawalsBundle:Default:index.html.twig');
+        $repo = $this->getDoctrine()->getRepository(PaymentRequests::class)->findAll();
+        
+        return $this->render('CreditWithdrawalsBundle:Default:index.html.twig', array('results' => $repo));
     }
 }

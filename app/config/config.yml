@@ -68,3 +68,7 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+jms_payment_core:
+    encryption:
+        secret: def00000c37bc4058eae3981975f024a7ae9569abc98a19914a68b3734949bb81de977d676b98b245fc9d39eb27be5cc0d416f2b0b3105557707440a727f56866be57798

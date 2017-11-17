@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new CreditWithdrawalsBundle\CreditWithdrawalsBundle(),
+            new JMS\Payment\CoreBundle\JMSPaymentCoreBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
